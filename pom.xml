@@ -2,12 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>hu.iis.me</groupId>
-    <artifactId>modify-this</artifactId>
+    <groupId>hu.iis</groupId>
+    <artifactId>calendar2job-engine</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>modify this</name>
+    <name>calendar2job-engine</name>
 
     <properties>
         <mockito.version>3.3.3</mockito.version>
@@ -18,10 +18,16 @@
     </properties>
 
     <dependencies>
+    <!-- ide fogom betenni a ti artifactotokat -->
+        <dependency>
+            <groupId>hu.me.java</groupId>
+            <artifactId>calendar-job-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
+            <version>1.18.26</version>
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
@@ -30,15 +36,16 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.9.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>${mockito.version}</version>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>4.6.1</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
